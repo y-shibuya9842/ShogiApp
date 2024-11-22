@@ -20,7 +20,6 @@ const initialBoard: Board = [
 
 const Board: React.FC = () => {
   const [board, setBoard] = useState<Board>(initialBoard);
-  const [highlightedSquares, setHighlightedSquares] = useState<{ x: number; y: number }[]>([]);
   
   const [selectedPiece, setSelectedPiece] = useState<{
     x: number;
