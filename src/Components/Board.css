@@ -1,0 +1,32 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1px;
+  width: 540px;
+  height: 540px;
+  margin: 0 auto;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.self-piece {
+  font-size: 20px;
+}
+
+.opponent-piece {
+  font-size: 20px;
+  transform: rotate(180deg); /* 相手の駒を上下さかさまに */
+}
+
+.highlighted {
+  background-color: #ffff00;  /* 黄色でハイライト */
+}
