@@ -228,14 +228,19 @@ export class Piece {
 
     private static getKeimaMove(x: number, y: number, owner: "self" | "opponent", board: Board): { x: number, y: number }[] {
         const moves: { x: number, y: number }[] = [];
-    
-        const directions = [
-            { dx: 1, dy: 2 },
-            { dx: -1, dy: 2 },
-            { dx: 1, dy: -2 },
-            { dx: -1, dy: -2 }
-        ];
-
+        let directions = [];
+        if (owner === "self") {
+            directions = [
+                { dx: 1, dy: -2 },
+                { dx: -1, dy: -2 }
+            ];
+        }else{
+            directions = [
+                { dx: 1, dy: 2 },
+                { dx: -1, dy: 2 }
+            ];
+        }
+        
         directions.forEach(({ dx, dy }) => {
             const newX = x + dx;
             const newY = y + dy;
