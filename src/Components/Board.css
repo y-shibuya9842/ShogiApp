@@ -30,3 +30,28 @@
 .highlighted {
   background-color: #ffff00;  /* 黄色でハイライト */
 }
+
+.board-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 持ち駒の表示スタイル */
+.captured-pieces {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 持ち駒のタイトル */
+.captured-pieces h3 {
+  margin-bottom: 10px;
+}
+
+.captured-piece{
+  font-size: 28px;
+  margin: 10px
+}
