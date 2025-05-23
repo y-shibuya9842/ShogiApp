@@ -337,10 +337,12 @@ const Board: React.FC = () => {
 
   const endGame = (player:string) => {
     if(player === "王将"){
-      alert("あなたの勝ちです")
+      alert("あなたの勝ちです");
+      window.location.reload();
     }
     else{
       alert("あなたの負けです")
+      window.location.reload();
     }
   }
 
